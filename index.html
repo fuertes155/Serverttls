@@ -1,231 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Index</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #0b1020;
-      --card: #111a33;
-      --text: #eef2ff;
-      --muted: #b7c0ff;
-      --accent: #5b8cff;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 20% 10%, #1c2b57 0%, var(--bg) 55%, #070a14 100%);
-      color: var(--text);
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-    }
-
-    .card {
-      width: min(720px, 100%);
-      background: color-mix(in srgb, var(--card) 90%, black 10%);
-      border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(24px, 3vw, 34px);
-      letter-spacing: 0.2px;
-    }
-
-    p {
-      margin: 0 0 16px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    a.button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--text);
-      border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
-      background: color-mix(in srgb, var(--accent) 22%, transparent);
-      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
-    }
-
-    a.button:hover {
-      transform: translateY(-1px);
-      background: color-mix(in srgb, var(--accent) 30%, transparent);
-      border-color: color-mix(in srgb, var(--accent) 70%, transparent);
-    }
-
-    .footer {
-      margin-top: 18px;
-      font-size: 12px;
-      color: color-mix(in srgb, var(--muted) 70%, transparent);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLS-server | Seguridad Avanzada</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <main class="card">
-    <h1>Index fácil</h1>
-    <p>
-      Página principal simple lista para usar. Edita el título y el texto según tu proyecto.
-    </p>
 
-    <div class="actions">
-      <a class="button" href="#seccion1">Ir a Sección 1</a>
-      <a class="button" href="#contacto">Contacto</a>
+  <div class="container">
+    <h2>🔒 Acceso Interno Server TLS</h2>
+
+    <div class="input-group">
+      <input type="text" id="username" placeholder="Usuario (ej. admin)" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
     </div>
 
-    <section id="seccion1" style="margin-top: 18px">
-      <h2 style="margin: 0 0 8px; font-size: 18px">Sección 1</h2>
-      <p style="margin: 0; color: var(--muted)">
-        Aquí puedes agregar información, enlaces o lo que necesites.
-      </p>
-    </section>
-
-    <section id="contacto" style="margin-top: 18px">
-      <h2 style="margin: 0 0 8px; font-size: 18px">Contacto</h2>
-      <p style="margin: 0; color: var(--muted)">
-        Email: <a href="mailto:correo@ejemplo.com" style="color: var(--text)">correo@ejemplo.com</a>
-      </p>
-    </section>
-
-    <div class="footer">Hecho con HTML + CSS, sin dependencias.</div>
-  </main>
-</body>
-
-</html>
-
-<!doctype html>
-<html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Index</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #0b1020;
-      --card: #111a33;
-      --text: #eef2ff;
-      --muted: #b7c0ff;
-      --accent: #5b8cff;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 20% 10%, #1c2b57 0%, var(--bg) 55%, #070a14 100%);
-      color: var(--text);
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-    }
-
-    .card {
-      width: min(720px, 100%);
-      background: color-mix(in srgb, var(--card) 90%, black 10%);
-      border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(24px, 3vw, 34px);
-      letter-spacing: 0.2px;
-    }
-
-    p {
-      margin: 0 0 16px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    a.button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--text);
-      border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
-      background: color-mix(in srgb, var(--accent) 22%, transparent);
-      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
-    }
-
-    a.button:hover {
-      transform: translateY(-1px);
-      background: color-mix(in srgb, var(--accent) 30%, transparent);
-      border-color: color-mix(in srgb, var(--accent) 70%, transparent);
-    }
-
-    .footer {
-      margin-top: 18px;
-      font-size: 12px;
-      color: color-mix(in srgb, var(--muted) 70%, transparent);
-    }
-  </style>
-</head>
-
-<body>
-  <main class="card">
-    <h1>Index fácil</h1>
-    <p>
-      Página principal simple lista para usar. Edita el título y el texto según tu proyecto.
-    </p>
-
-    <div class="actions">
-      <a class="button" href="#seccion1">Ir a Sección 1</a>
-      <a class="button" href="#contacto">Contacto</a>
+    <div class="btn-group">
+      <button id="btnLogin" class="btn-login">Iniciar Sesión</button>
+      <button id="btnSecret" class="btn-secret">Consultar Datos Secretos</button>
     </div>
 
-    <section id="seccion1" style="margin-top: 18px">
-      <h2 style="margin: 0 0 8px; font-size: 18px">Sección 1</h2>
-      <p style="margin: 0; color: var(--muted)">
-        Aquí puedes agregar información, enlaces o lo que necesites.
-      </p>
-    </section>
+    <div id="resultado-container">
+      <span class="label">Respuesta del servidor:</span>
+      <div id="resultado">Ingrese sus credenciales para continuar...</div>
+    </div>
 
-    <section id="contacto" style="margin-top: 18px">
-      <h2 style="margin: 0 0 8px; font-size: 18px">Contacto</h2>
-      <p style="margin: 0; color: var(--muted)">
-        Email: <a href="mailto:correo@ejemplo.com" style="color: var(--text)">correo@ejemplo.com</a>
-      </p>
-    </section>
+    <div id="section-2fa" style="display: none; margin-top: 25px; border-top: 1px solid #ddd; padding-top: 20px;">
+      <h3>🛡️ Configurar 2FA</h3>
+      <p style="font-size: 0.8rem; color: #666;">Escanea el QR con Google Authenticator</p>
 
-    <div class="footer">Hecho con HTML + CSS, sin dependencias.</div>
-  </main>
+      <button onclick="configurar2FA()"
+        style="background-color: var(--accent-color); color: white; width: 100%; margin-bottom: 10px;">
+        Generar QR de Seguridad
+      </button>
+
+      <div id="qr-container" style="margin: 15px 0;"></div>
+
+      <div class="input-group">
+        <input type="text" id="codigo2fa" placeholder="Código de 6 dígitos" maxlength="6">
+      </div>
+
+      <button onclick="verificar2FA()" style="width: 100%;">Verificar Código</button>
+    </div>
+
+  </div>
+
+  <script src="/script.js"></script>
+  <script src="/auth.js"></script>
+
 </body>
 
 </html>
