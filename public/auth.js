@@ -13,13 +13,21 @@ async function configurar2FA() {
         });
         const data = await response.json();
 
+        // Verificación de errores
+        if (!data.success) {
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `<span style="color: red;">${data.error || 'Error desconocido'}</span>`;
+            resultadoDiv.parentElement.style.backgroundColor = "#f8d7da";
+            return;
+        }
+
         // Guardamos el secreto en memoria para la verificación posterior
         temp2FASecret = data.secret;
 
         // Mostramos el QR en el contenedor del HTML
         const qrContainer = document.getElementById('qr-container');
         qrContainer.innerHTML = `<img src="${data.qrCode}" alt="QR Code" style="border: 5px solid white; border-radius: 10px;">`;
-        
+
         //console.log("Secreto temporal:", temp2FASecret);
     } catch (error) {
         console.error("Error al configurar 2FA:", error);
@@ -36,13 +44,13 @@ async function verificar2FA() {
     try {
         const response = await fetch('/api/2fa/verify', {
             method: 'POST',
-            headers: { 
+            headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             },
-            body: JSON.stringify({ 
-                token: codigo, 
-                secret: temp2FASecret 
+            body: JSON.stringify({
+                token: codigo,
+                secret: temp2FASecret
             })
         });
 
